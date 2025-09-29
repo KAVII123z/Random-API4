@@ -8,7 +8,7 @@ const words = [
   { word: "journey", hint: "long travel adventure" }
 ];
 
-module.exports = (req, res) => {
+export default function handler(req, res) {
   const idx = randomInt(0, words.length);
   res.status(200).json(words[idx]);
-};
+}
